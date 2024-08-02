@@ -30,9 +30,22 @@ public class App {
         while (true) {
             if(estudiantes[pos]==null) {
                 estudiantes[pos]= nombre;
+                System.out.println("el estudiante se agregó en la posición "+ pos );
                 break;
             }else{
                 pos++;
+                if (pos==estudiantes.length) {
+                    for (String string : estudiantes) {
+                        if (string==null){
+                            break;
+                        }else{
+                            System.out.println("arreglo lleno");
+                            break;
+                        }
+                    }
+                    pos=0;
+                }
+            
             }
 
 
